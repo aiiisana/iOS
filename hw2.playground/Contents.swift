@@ -80,7 +80,6 @@ func convertTemperature(_ temp: Double, from unit: String, to target: String) ->
 func runConverter() {
     print("Temperature сonverter")
     
-    // 🔹 instead of asking user, just hardcode values
     let tempValue: Double = 100
     let inputUnit: String = "C"
     
