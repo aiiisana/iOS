@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tabBarController">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+    </dependencies>
+    <scenes>
+        <!-- Tab Bar Controller -->
+        <scene sceneID="tabScene">
+            <objects>
+                <tabBarController id="tabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" id="tabBar"/>
+                    <viewControllers>
+                        <!-- Movies Navigation -->
+                        <navigationController id="navMovies">
+                            <navigationBar key="navigationBar" id="navBarMovies"/>
+                            <viewController key="rootViewController" id="vcMovies" customClass="CategoryViewController" customModule="FavoritesApp" customModuleProvider="target">
+                                <view key="view" contentMode="scaleToFill" id="viewMovies">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tableMovies">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        </tableView>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="safeAreaMovies"/>
+                                    <constraints>
+                                        <constraint firstItem="tableMovies" firstAttribute="top" secondItem="safeAreaMovies" secondAttribute="top" constant="0"/>
+                                        <constraint firstItem="tableMovies" firstAttribute="bottom" secondItem="safeAreaMovies" secondAttribute="bottom" constant="0"/>
+                                        <constraint firstItem="tableMovies" firstAttribute="leading" secondItem="safeAreaMovies" secondAttribute="leading" constant="0"/>
+                                        <constraint firstItem="tableMovies" firstAttribute="trailing" secondItem="safeAreaMovies" secondAttribute="trailing" constant="0"/>
+                                    </constraints>
+                                </view>
+                                <tabBarItem key="tabBarItem" title="Movies" image="film" id="tabItemMovies"/>
+                            </viewController>
+                        </navigationController>
+                        <!-- Music Navigation -->
+                        <navigationController id="navMusic">
+                            <navigationBar key="navigationBar" id="navBarMusic"/>
+                            <viewController key="rootViewController" id="vcMusic" customClass="CategoryViewController" customModule="FavoritesApp" customModuleProvider="target">
+                                <view key="view" contentMode="scaleToFill" id="viewMusic">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tableMusic"/>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="safeAreaMusic"/>
+                                    <constraints>
+                                        <constraint firstItem="tableMusic" firstAttribute="top" secondItem="safeAreaMusic" secondAttribute="top" constant="0"/>
+                                        <constraint firstItem="tableMusic" firstAttribute="bottom" secondItem="safeAreaMusic" secondAttribute="bottom" constant="0"/>
+                                        <constraint firstItem="tableMusic" firstAttribute="leading" secondItem="safeAreaMusic" secondAttribute="leading" constant="0"/>
+                                        <constraint firstItem="tableMusic" firstAttribute="trailing" secondItem="safeAreaMusic" secondAttribute="trailing" constant="0"/>
+                                    </constraints>
+                                </view>
+                                <tabBarItem key="tabBarItem" title="Music" image="music.note" id="tabItemMusic"/>
+                            </viewController>
+                        </navigationController>
+                        <!-- Books Navigation -->
+                        <navigationController id="navBooks">
+                            <navigationBar key="navigationBar" id="navBarBooks"/>
+                            <viewController key="rootViewController" id="vcBooks" customClass="CategoryViewController" customModule="FavoritesApp" customModuleProvider="target">
+                                <view key="view" contentMode="scaleToFill" id="viewBooks">
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tableBooks"/>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="safeAreaBooks"/>
+                                    <constraints>
+                                        <constraint firstItem="tableBooks" firstAttribute="top" secondItem="safeAreaBooks" secondAttribute="top" constant="0"/>
+                                        <constraint firstItem="tableBooks" firstAttribute="bottom" secondItem="safeAreaBooks" secondAttribute="bottom" constant="0"/>
+                                        <constraint firstItem="tableBooks" firstAttribute="leading" secondItem="safeAreaBooks" secondAttribute="leading" constant="0"/>
+                                        <constraint firstItem="tableBooks" firstAttribute="trailing" secondItem="safeAreaBooks" secondAttribute="trailing" constant="0"/>
+                                    </constraints>
+                                </view>
+                                <tabBarItem key="tabBarItem" title="Books" image="book" id="tabItemBooks"/>
+                            </viewController>
+                        </navigationController>
+                        <!-- Courses Navigation -->
+                        <navigationController id="navCourses">
+                            <navigationBar key="navigationBar" id="navBarCourses"/>
+                            <viewController key="rootViewController" id="vcCourses" customClass="CategoryViewController" customModule="FavoritesApp" customModuleProvider="target">
+                                <view key="view" contentMode="scaleToFill" id="viewCourses">
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tableCourses"/>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="safeAreaCourses"/>
+                                    <constraints>
+                                        <constraint firstItem="tableCourses" firstAttribute="top" secondItem="safeAreaCourses" secondAttribute="top" constant="0"/>
+                                        <constraint firstItem="tableCourses" firstAttribute="bottom" secondItem="safeAreaCourses" secondAttribute="bottom" constant="0"/>
+                                        <constraint firstItem="tableCourses" firstAttribute="leading" secondItem="safeAreaCourses" secondAttribute="leading" constant="0"/>
+                                        <constraint firstItem="tableCourses" firstAttribute="trailing" secondItem="safeAreaCourses" secondAttribute="trailing" constant="0"/>
+                                    </constraints>
+                                </view>
+                                <tabBarItem key="tabBarItem" title="Courses" image="graduationcap" id="tabItemCourses"/>
+                            </viewController>
+                        </navigationController>
+                    </viewControllers>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="firstResponderTab" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50" y="50"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
