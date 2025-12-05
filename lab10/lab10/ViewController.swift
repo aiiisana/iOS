@@ -35,9 +35,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Superhero Randomizer"
-
         setupUI()
-        loadHeroes()
+        
+        if let id = loadLastHeroID() {
+            fetchHeroByID(id: id)
+        } else {
+            loadHeroes()
+        }
     }
 
     private func setupUI() {
@@ -304,6 +308,27 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.4) {
                 labels.forEach { $0.alpha = 1.0 }
             }
+        }
+    }
+    
+    
+    func saveLastHero(id: Int) {
+        UserDefaults.standard.set(id, forKey: "lastHeroID")
+    }
+
+    func loadLastHeroID() -> Int? {
+        return UserDefaults.standard.value(forKey: "lastHeroID") as? Int
+    }
+    
+    private func fetchHeroByID(id: Int) {
+        if !heroes.isEmpty {
+            if let hero = heroes.first(where: { $0.id == id }) {
+                displayHero(hero, animated: false)
+            } else {
+                loadHeroes()
+            }
+        } else {
+            loadHeroes()
         }
     }
 }
