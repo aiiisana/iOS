@@ -226,7 +226,6 @@ class ViewController: UIViewController {
                 switch result {
                 case .success(let list):
                     self.heroes = list
-                    // If there is saved last hero ID — show it
                     if let lastID = Persistence.loadLastHeroID(),
                        let hero = self.heroes.first(where: { $0.id == lastID }) {
                         self.displayHero(hero, animated: false)
