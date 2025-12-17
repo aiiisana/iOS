@@ -8,6 +8,9 @@ iOS-клиент для работы с базой **OMDb API**. Реализа�
 * **Data:** Singleton pattern, Watchlist management.
 * **Arch:** MVC (Massive View Controller free version).
 
+  
+<img width="392" height="796" alt="image" src="https://github.com/user-attachments/assets/4e02bf16-e9c8-4ed4-8164-8b3d76b6b0d2" />
+
 ## 🚀 Основной функционал
 * **Dynamic Sections:** Ленты фильмов с горизонтальным скроллом и сеточкой в поиске через `UICollectionViewCompositionalLayout`.
 * **Deep Search:** Поиск по всей базе OMDb с фильтрацией результатов.
