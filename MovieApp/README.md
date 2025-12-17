@@ -9,7 +9,7 @@ iOS-клиент для работы с базой **OMDb API**. Реализа�
 * **Arch:** MVC (Massive View Controller free version).
 
   
-<img width="392" height="796" alt="image" src="https://github.com/user-attachments/assets/4e02bf16-e9c8-4ed4-8164-8b3d76b6b0d2" />
+<img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/8051fce7-2bd7-4df6-8cb2-e68024a292d9" />
 
 ## 🚀 Основной функционал
 * **Dynamic Sections:** Ленты фильмов с горизонтальным скроллом и сеточкой в поиске через `UICollectionViewCompositionalLayout`.
